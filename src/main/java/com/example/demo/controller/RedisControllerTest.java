@@ -18,7 +18,7 @@ public class RedisControllerTest {
 
     public String redisTest() {
         User user=new User();
-        user.setAge(21);
+        user.setAge(2777);
         boolean bing = redisUtil.set("Bing", user);
 
         return String.valueOf(bing);

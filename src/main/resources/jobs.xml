@@ -11,12 +11,15 @@
                         http://www.dangdang.com/schema/ddframe/job/job.xsd
                         ">
     <!--配置作业注册中心 -->
-    <reg:zookeeper id="regCenter" server-lists="${elastic.job.server}" namespace="${elastic.job.namespace}" base-sleep-time-milliseconds="1000"
+    <reg:zookeeper id="regCenter" server-lists="127.0.0.1:2181" namespace="test-job123" base-sleep-time-milliseconds="1000"
                    max-sleep-time-milliseconds="3000" max-retries="3" />
 
     <!-- 配置作业 下面的TestJob就是我们刚才新建的测试类-->
     <job:simple id="testJob" class="com.example.demo.job.TestJob"
-                registry-center-ref="regCenter" cron="0/5 * * * * ?"
+                registry-center-ref="regCenter" cron="0/2 * * * * ?"
+                sharding-total-count="1"/>
+    <job:simple id="testJob1" class="com.example.demo.job.TestJob1"
+                registry-center-ref="regCenter" cron="0/2 * * * * ?"
                 sharding-total-count="1"/>
 
 </beans>

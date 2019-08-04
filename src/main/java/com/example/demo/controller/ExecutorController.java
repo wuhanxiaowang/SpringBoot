@@ -8,6 +8,11 @@ import javax.annotation.Resource;
 
 @RestController
 @RequestMapping("/demo")
+
+/**
+ * @author:wy
+ * @date:2019/8/318:57
+ */
 public class ExecutorController {
 
     @Resource
@@ -15,6 +20,9 @@ public class ExecutorController {
     @RequestMapping("/excutor")
     public String executor(){
         excutorService.executeAsync();
+
         return "ok";
     }
+
+
 }

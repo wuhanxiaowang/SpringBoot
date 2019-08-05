@@ -164,6 +164,14 @@
             <version>3.8.1</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>easyexcel</artifactId>
+            <version>1.0.3</version>
+        </dependency>
+
+
+
     </dependencies>
 
     <build>

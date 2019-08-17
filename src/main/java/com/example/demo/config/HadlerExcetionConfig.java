@@ -1,7 +1,6 @@
 package com.example.demo.config;
 
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -17,7 +16,7 @@ import java.util.Map;
  * @ModifyDate 2019/8/17 13:12
  * @Version 1.0
  */
-@ControllerAdvice
+//@ControllerAdvice
 public class HadlerExcetionConfig {
 
 

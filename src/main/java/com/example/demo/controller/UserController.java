@@ -3,6 +3,7 @@ package com.example.demo.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.example.demo.config.UserNotFindException;
 import com.example.demo.dao.UserDao;
 import com.example.demo.entity.User;
 import com.example.demo.service.UserService;
@@ -21,7 +22,7 @@ import javax.annotation.Resource;
  * @since 2019-06-29
  */
 @RestController
-@RequestMapping("/demo/user")
+@RequestMapping("/demo")
 public class UserController {
     private static final Integer PEICE = 20;
     final Integer PRICE=20;
@@ -63,6 +64,11 @@ public class UserController {
         }
         userService.updateById(user);
         return JSON.toJSONString(user);
+    }
+
+    @RequestMapping("/hello2")
+    public String hello2(){
+        throw new UserNotFindException();
     }
 }
 

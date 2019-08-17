@@ -14,8 +14,11 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2019-06-29
  */
 @RestController
-@RequestMapping("/demo/userinfo")
+@RequestMapping("/demo")
 public class UserinfoController {
+
+
+
 
 }
 

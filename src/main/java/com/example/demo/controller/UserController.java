@@ -70,5 +70,9 @@ public class UserController {
     public String hello2(){
         throw new UserNotFindException();
     }
+
+
+
+
 }
 

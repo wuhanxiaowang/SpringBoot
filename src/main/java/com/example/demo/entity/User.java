@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
@@ -36,6 +37,7 @@ public class User implements Serializable {
 
     private String modifyer;
 
+    @NotNull(message = "名字不允许空")
     private String name;
 
     private Integer age;

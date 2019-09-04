@@ -1,12 +1,5 @@
 package com.example.demo.config;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.builders.WebSecurity;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-
 /**
  * @ClassName SpringSecurityConfig
  * @Description TODO
@@ -15,18 +8,22 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
  * @ModifyDate 2019/8/17 11:36
  * @Version 1.0
  */
-@Configuration
-@EnableWebSecurity
+//@Configuration
+//@EnableWebSecurity
+/*
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     CustomPasswordEncoder customPasswordEncoder;
 
 
-    /**
-       @Description 基于内存验证的方法
     */
-   /* @Override
+/**
+       @Description 基于内存验证的方法
+    *//*
+
+   */
+/* @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
                 .withUser("admin").password("123456").roles("ADMIN")
@@ -34,11 +31,14 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .withUser("user").password("123456").roles("Employee")
                 .and()
                 .passwordEncoder(customPasswordEncoder);
-    }*/
+    }*//*
 
-    /**
-       @Description 拦截http请求
+
     */
+/**
+       @Description 拦截http请求
+    *//*
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
        http.formLogin()
@@ -52,9 +52,11 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
        http.csrf().disable();
     }
 
-    /**
-       @Description 忽略一些静态资源
     */
+/**
+       @Description 忽略一些静态资源
+    *//*
+
     @Override
     public void configure(WebSecurity web) throws Exception {
        web.ignoring().antMatchers("/js/**","/css/**","/images/**");
@@ -65,3 +67,4 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
 
 }
+*/
